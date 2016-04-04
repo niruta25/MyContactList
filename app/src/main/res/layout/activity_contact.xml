@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.niruta.mycontactlist.ContactActivity">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/notification_large_icon_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/navbar">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonList"
+            android:src="@drawable/contactlisticon"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageButtonMap"
+            android:background="#010101" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonMap"
+            android:src="@drawable/mapicon"
+            android:background="#010101"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonSettings"
+            android:layout_alignTop="@+id/imageButtonMap"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/settingsicon"
+            android:layout_toEndOf="@+id/imageButtonMap"
+            android:background="#010101" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#9e9b9b"
+        android:id="@+id/toolbar">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButtonEdit"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/navbar"
+        android:layout_alignEnd="@+id/toolbar"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minHeight="360dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact:"
+                android:id="@+id/textName"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editName"
+                android:layout_below="@+id/textName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorData"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:id="@+id/textAddress"
+                android:layout_below="@+id/editName"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editAddress"
+                android:inputType="textPostalAddress"
+                android:layout_below="@+id/textAddress"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorData"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editCity"
+                android:layout_below="@+id/editAddress"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/editState"
+                android:background="@color/colorData"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editState"
+                android:minWidth="100dp"
+                android:layout_below="@+id/editAddress"
+                android:layout_toStartOf="@+id/editZipcode"
+                android:background="@color/colorData"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editZipcode"
+                android:inputType="numberSigned"
+                android:layout_below="@+id/editAddress"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/editState"
+                android:minWidth="100dp"
+                android:background="@color/colorData"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home Phone:"
+                android:id="@+id/textHome"
+                android:layout_below="@+id/editCity"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cell Phone:"
+                android:id="@+id/textCell"
+                android:layout_alignTop="@+id/textHome"
+                android:layout_alignStart="@+id/editState"
+                android:layout_marginStart="36dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:id="@+id/editHome"
+                android:layout_below="@+id/textHome"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/textCell"
+                android:background="@color/colorData"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editCell"
+                android:inputType="phone"
+                android:layout_below="@+id/textCell"
+                android:layout_alignStart="@+id/textCell"
+                android:layout_alignBottom="@+id/editHome"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorData"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:id="@+id/textMail"
+                android:layout_below="@+id/editHome"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEMail"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/textMail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorData" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthday:"
+                android:id="@+id/textBday"
+                android:layout_below="@+id/editEMail"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textBirthday"
+                android:background="@color/colorData"
+                android:layout_below="@+id/textBday"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/btnBirthday" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:text="Change"
+                android:id="@+id/btnBirthday"
+                android:layout_alignTop="@+id/textBirthday"
+                android:layout_toEndOf="@+id/textCell" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
