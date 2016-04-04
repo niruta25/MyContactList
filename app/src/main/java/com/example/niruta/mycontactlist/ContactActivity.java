@@ -1,7 +1,6 @@
 package com.example.niruta.mycontactlist;
 
 import com.example.niruta.mycontactlist.DatePickerDialog.SaveDateListener;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
